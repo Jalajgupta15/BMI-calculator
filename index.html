@@ -5,24 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI Calculator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 400px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -39,27 +22,7 @@
         <h2>Result:</h2>
         <p id="bmiResult"></p>
     </div>
-
-    <script>
-        function calculateBMI() {
-            var weight = parseFloat(document.getElementById("weight").value);
-            var height = parseFloat(document.getElementById("height").value) / 100; // Convert height to meters
-            var bmi = weight / (height * height);
-            var result = "";
-
-            if (bmi < 18.5) {
-                result = "Underweight";
-            } else if (bmi >= 18.5 && bmi <= 24.9) {
-                result = "Normal or Healthy Weight";
-            } else if (bmi >= 25 && bmi <= 29.9) {
-                result = "Overweight";
-            } else {
-                result = "Obese";
-            }
-
-            document.getElementById("bmiResult").textContent = "The person is " + result;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
